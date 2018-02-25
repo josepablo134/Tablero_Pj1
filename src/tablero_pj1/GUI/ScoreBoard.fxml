@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tablero_pj1.GUI.ScoreBoardController">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="800.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fx:id="BG_ImageView" fitHeight="720.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent;" />
+            <Pane layoutX="-1.0" layoutY="13.0" prefHeight="385.0" prefWidth="261.0">
+               <children>
+                  <Label layoutX="55.0" layoutY="24.0" text="HOME" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <TextField fx:id="PTS_A_DATA" layoutX="36.0" layoutY="76.0" prefHeight="60.0" prefWidth="112.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="000">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="36.0" layoutY="149.0" text="Faults" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="FLTS_A_DATA" layoutX="51.0" layoutY="195.0" prefHeight="60.0" prefWidth="105.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="00">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="PLYR_A_DATA" layoutX="52.0" layoutY="311.0" prefHeight="60.0" prefWidth="88.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="--">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="38.0" layoutY="266.0" text="Player" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Save_PTS_TMA" layoutX="152.0" layoutY="90.0" mnemonicParsing="false" onAction="#EventSave_PTS_TMA" prefHeight="31.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Media/guardar-archivo-opcion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="Save_FLTS_TMA" layoutX="154.0" layoutY="209.0" mnemonicParsing="false" onAction="#EventSave_FLTS_TMA" prefHeight="31.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Media/guardar-archivo-opcion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="PTR_A" layoutX="160.0" layoutY="36.0" mnemonicParsing="false" onAction="#EventPTR_A" />
+               </children>
+            </Pane>
+            <Pane layoutX="499.0" layoutY="29.0" prefHeight="385.0" prefWidth="261.0">
+               <children>
+                  <Label layoutX="135.0" layoutY="11.0" text="GUEST" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PTS_B_DATA" layoutX="127.0" layoutY="67.0" prefHeight="60.0" prefWidth="112.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="000">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="127.0" layoutY="140.0" text="Faults" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="FLTS_B_DATA" layoutX="125.0" layoutY="186.0" prefHeight="60.0" prefWidth="105.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="00">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="PLYR_B_DATA" layoutX="143.0" layoutY="302.0" prefHeight="60.0" prefWidth="88.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="--">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="129.0" layoutY="257.0" text="Player" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Save_PTS_TMB" layoutX="53.0" layoutY="81.0" mnemonicParsing="false" onAction="#EventSave_PTS_TMB" prefHeight="31.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Media/guardar-archivo-opcion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="Save_FLTS_TMB" layoutX="53.0" layoutY="200.0" mnemonicParsing="false" onAction="#EventSave_FLTS_TMB" prefHeight="31.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Media/guardar-archivo-opcion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="PTR_B" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#EventPTR_B" />
+               </children>
+            </Pane>
+            <Pane layoutX="267.0" layoutY="51.0" prefHeight="382.0" prefWidth="261.0">
+               <children>
+                  <Label layoutX="82.0" layoutY="47.0" text="Period" textFill="#e7ff00">
+                     <font>
+                        <Font name="Score Board" size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="89.0" layoutY="279.0" text="Fault" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Score Board" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="FAULT_DATA" layoutX="93.0" layoutY="324.0" prefHeight="60.0" prefWidth="88.0" promptText="SCORE" style="-fx-background-color: black; -fx-text-fill: red;" text="--">
+                     <font>
+                        <Font name="Digital-7" size="40.0" />
+                     </font>
+                  </TextField>
+                  <Pane layoutX="112.0" layoutY="87.0" prefHeight="65.0" prefWidth="49.0" style="-fx-background-color: black;">
+                     <children>
+                        <TextField fx:id="PERIODO_DATA" layoutX="-41.0" layoutY="-5.0" prefHeight="60.0" prefWidth="87.0" promptText="Periodo" style="-fx-background-color: transparent; -fx-text-fill: yellow;" text="1">
+                           <font>
+                              <Font name="Digital-7" size="40.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="Save_Periodo" layoutX="12.0" layoutY="28.0" mnemonicParsing="false" onAction="#EventSave_Periodo" prefHeight="31.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/guardar-archivo-opcion.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="33.0" layoutY="171.0" prefHeight="60.0" prefWidth="211.0" style="-fx-background-color: black;">
+                     <children>
+                        <Label layoutX="74.0" layoutY="14.0" text=":" textFill="RED">
+                           <font>
+                              <Font name="Digital-7" size="40.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="MIN_DATA" layoutX="-15.0" prefHeight="60.0" prefWidth="105.0" promptText="Minutos" style="-fx-background-color: transparent; -fx-text-fill: red;" text="10">
+                           <font>
+                              <Font name="Digital-7" size="40.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="SEC_DATA" layoutX="81.0" prefHeight="60.0" prefWidth="105.0" promptText="Segundos" style="-fx-background-color: transparent; -fx-text-fill: red;" text="00">
+                           <font>
+                              <Font name="Digital-7" size="40.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="Save_Tiempo" layoutX="159.0" layoutY="15.0" mnemonicParsing="false" onAction="#EventSave_Tiempo" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/guardar-archivo-opcion.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="43.0" layoutY="447.0" prefHeight="251.0" prefWidth="716.0">
+               <children>
+                  <Button fx:id="Play_Button" layoutX="288.0" layoutY="44.0" mnemonicParsing="false" onAction="#EventPlay_Button" text="Play" />
+                  <Button fx:id="Pause_Button" layoutX="362.0" layoutY="44.0" mnemonicParsing="false" onAction="#EventPause_Button" text="Pause" />
+                  <Button fx:id="Default_Button" layoutX="202.0" layoutY="44.0" mnemonicParsing="false" onAction="#EventDefault_Button" text="Default" />
+                  <Button fx:id="Settings_Button" layoutX="371.0" layoutY="90.0" mnemonicParsing="false" onAction="#EventSettings_Button" text="Settings" />
+                  <TextArea fx:id="Log_TextArea" editable="false" layoutX="3.0" layoutY="147.0" prefHeight="104.0" prefWidth="711.0" />
+                  <Button fx:id="Clear_Log_Button" layoutX="655.0" layoutY="195.0" mnemonicParsing="false" onAction="#EventClear_Log_Button" prefHeight="42.0" prefWidth="44.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Media/goma-de-borrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="26.0" layoutY="117.0" prefHeight="17.0" prefWidth="105.0" text="LOG :" textFill="WHITE">
+                     <font>
+                        <Font name="Score Board" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="AddFault_Button" layoutX="440.0" layoutY="44.0" mnemonicParsing="false" onAction="#EventAddFault_Button" text="Add-Fault" />
+                  <Button fx:id="Read_Button" layoutX="651.0" layoutY="147.0" mnemonicParsing="false" onAction="#EventRead_Button" prefHeight="50.0" prefWidth="49.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Media/lentes.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="New_Per_Button" layoutX="264.0" layoutY="90.0" mnemonicParsing="false" onAction="#EventNew_Per_Button" prefHeight="27.0" prefWidth="79.0" text="New Per" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

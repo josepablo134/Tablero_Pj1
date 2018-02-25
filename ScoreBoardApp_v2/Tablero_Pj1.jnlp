@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Tablero_Pj1.jnlp">
+  <information>
+    <title>Tablero_Pj1</title>
+    <vendor>josepablocruzbaas</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Tablero_Pj1.jar" size="3261718" download="eager" />
+    <jar href="lib/ScoreBoard_Communication.jar" size="4625" download="eager" />
+    <jar href="lib/jssc.jar" size="152500" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Tablero_Pj1" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="tablero_pj1.Tablero_Pj1"  name="Tablero_Pj1" />
+  <update check="always"/>
+</jnlp>
